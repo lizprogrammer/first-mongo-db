@@ -16,10 +16,6 @@ const StockSchema = new Schema({
   },
   percentChange: {
     type: String,
-  },
-  date: {
-    type: Date,
-    default: Date.now
   }
 })
 
