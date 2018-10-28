@@ -10,7 +10,7 @@ const StockSchema = new Schema({
     type: String,
     require: true
   },
-    change {    
+    change: {    
     type: String,
     require: true
   },
