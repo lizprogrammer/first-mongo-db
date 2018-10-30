@@ -28,7 +28,7 @@ router.get('/', (req, res) => {
 
 
 router.get('/:name', (req, res) => {
-  const name = req.params.name;
+  const {name, password, avatar} = req.params;
   User.findOne({ name : name })
     .then(user => {
       if(!user){
@@ -37,6 +37,16 @@ router.get('/:name', (req, res) => {
       res.json(user);
     })
     .catch(err => res.status(500).json({message: err}));
+})
+
+router.post('/', (req, res) => {
+  const newUser = new User({
+    name,
+    password,
+    avatar
+  })
+  
+  newUser.save()
 })
 
 // router.post('/register', (req, res) => {
