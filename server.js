@@ -16,7 +16,7 @@ mongoose
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.log(err))
 
-app.get('/', (req, res) => res.send('Hello bishes!'))
+app.get('/', (req, res) => res.send('Hello people!'))
 
 app.use('/api/users',users)
 app.use('/api/profile',profile)
